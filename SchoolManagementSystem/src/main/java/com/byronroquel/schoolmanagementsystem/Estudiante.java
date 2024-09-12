@@ -3,21 +3,18 @@ package com.byronroquel.schoolmanagementsystem;
  *
  * @author LENOVO
  */
-public class Estudiante {
+public class Estudiante extends Persona{
     private int id;
-    private String nombre;
-    private String apellido;
     private String fechaDeNacimiento;
     public String estado;
-    
-    public Estudiante (int id, String nombre, String apellido, String fechaDeNacimiento, String estado){
+
+    public Estudiante(int id, String fechaDeNacimiento, String estado, String nombre, String apellido) {
+        super(nombre, apellido);
         this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.estado = estado;
     }
-
+    
     public int getId() {
         return id;
     }
@@ -25,23 +22,7 @@ public class Estudiante {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
+    
     public String getFechaDeNacimiento() {
         return fechaDeNacimiento;
     }
